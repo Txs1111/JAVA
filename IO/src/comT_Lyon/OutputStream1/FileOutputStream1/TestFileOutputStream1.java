@@ -15,5 +15,8 @@ public class TestFileOutputStream1 {
 
 //        方式二
         FileOutputStream fileOutputStream1 = new FileOutputStream("src\\comT_Lyon\\OutputStream1\\FileOutputStream1\\v2-465cfb29e39464a9e1a6707e605a97c3_r - 副本.jpg");
+
+    fileOutputStream.close();
+    fileOutputStream1.close();
     }
 }
