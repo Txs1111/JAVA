@@ -1,4 +1,4 @@
-package comT_Lyon.method1;
+package comT_Lyon.method1.getMessage;
 
 import org.junit.Test;
 

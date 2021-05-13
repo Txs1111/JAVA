@@ -1,4 +1,4 @@
-package comT_Lyon.method2;
+package comT_Lyon.method1.ifExitOrDirectory;
 
 import org.junit.Test;
 

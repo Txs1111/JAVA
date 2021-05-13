@@ -1,10 +1,11 @@
-package comT_Lyon.method4;
+package comT_Lyon.method1.allDirectory;
 
 import org.junit.Test;
 
 import java.io.File;
 
 public class TestEach {
+    //    遍历所有文件
     @Test
     public void createFile() throws Exception {
         File file = new File("c:");
