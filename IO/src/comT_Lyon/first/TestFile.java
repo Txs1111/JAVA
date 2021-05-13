@@ -1,9 +1,8 @@
-package comT_Lyon.newFile;
+package comT_Lyon.first;
 
 import org.junit.Test;
 
 import java.io.File;
-import java.io.IOException;
 
 public class TestFile {
 
