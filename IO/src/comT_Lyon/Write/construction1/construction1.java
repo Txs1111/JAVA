@@ -1,9 +1,8 @@
-package comT_Lyon.Write.construction;
+package comT_Lyon.Write.construction1;
 
 import org.junit.Test;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 
 public class construction1 {
