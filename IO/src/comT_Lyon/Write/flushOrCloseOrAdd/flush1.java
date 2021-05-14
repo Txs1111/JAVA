@@ -1,4 +1,4 @@
-package comT_Lyon.Write.flushOrClose;
+package comT_Lyon.Write.flushOrCloseOrAdd;
 
 import org.junit.Test;
 
