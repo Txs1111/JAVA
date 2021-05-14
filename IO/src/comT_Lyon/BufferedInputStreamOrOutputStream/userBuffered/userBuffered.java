@@ -1,4 +1,4 @@
-package comT_Lyon.Buffered1.userBuffered;
+package comT_Lyon.BufferedInputStreamOrOutputStream.userBuffered;
 
 import org.junit.Test;
 

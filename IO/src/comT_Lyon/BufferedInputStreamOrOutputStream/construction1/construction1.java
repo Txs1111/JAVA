@@ -1,4 +1,4 @@
-package comT_Lyon.Buffered1.construction1;
+package comT_Lyon.BufferedInputStreamOrOutputStream.construction1;
 
 import org.junit.Test;
 
