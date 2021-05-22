@@ -1,31 +1,26 @@
-package com.T_Lyon.nextLine;
+package com.T_Lyon.Scanner1.hasNextDouble;
 
-import org.junit.Test;
 
 import java.util.Scanner;
+
 
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 14:53:53
- * <p>
- * 测试nextLine
+ * 2021-5-22 15:54:50
+ * 测试hasNextDouble
  */
-public class ReadEnter_Test版 {
+public class ReadEnter {
     /**
-     * 注意scanner必须使用主函数，@Test没有办法使用
-     * <p>
-     * 查阅得，这是IDEA的锅，
-     * <p>
-     * 在Help里面自定义vm选项中加入下面的即可
-     * <p>
-     * -Deditable.java.test.console=true
+     * 读取输入的单词，判断是否有Double型数（读取Double，Int等整形类型的数中间有其他类型的数就会结束读取），以空格为界限，常搭配next使用
      */
-    public void demo() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入：");
-        String s = scanner.nextLine();
-        pd(s);
+    public static void demo() {
+        System.out.println("请输入若干单词，以空格作为分隔");
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNextDouble()) {
+            System.out.println("键盘输入的内容是：" + sc.next());
+        }
+//        pd(s);
     }
 
     /**
@@ -41,11 +36,13 @@ public class ReadEnter_Test版 {
         }
     }
 
+
     /**
-     * main1
+     * main
+     *
+     * @param args
      */
-    @Test
-    public void main1() {
+    public static void main(String[] args) {
         int a = 1;
         do {
             demo();
@@ -59,7 +56,7 @@ public class ReadEnter_Test版 {
      *
      * @return
      */
-    private int scanner_parameter() {
+    private static int scanner_parameter() {
         Scanner scanner = new Scanner(System.in);
         Object s = scanner.nextLine();
         if (s.equals("1")) {
@@ -70,4 +67,5 @@ public class ReadEnter_Test版 {
             return 0;
         }
     }
+
 }

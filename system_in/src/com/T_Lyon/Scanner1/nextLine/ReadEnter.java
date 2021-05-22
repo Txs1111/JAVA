@@ -1,4 +1,4 @@
-package com.T_Lyon.nextLine;
+package com.T_Lyon.Scanner1.nextLine;
 
 
 import java.util.Scanner;
