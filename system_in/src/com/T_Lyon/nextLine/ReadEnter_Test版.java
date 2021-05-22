@@ -1,35 +1,51 @@
-package com.T_Lyon;
+package com.T_Lyon.nextLine;
 
+import org.junit.Test;
 
 import java.util.Scanner;
 
 /**
  * @author Lyon
  * <p>
- * 2021年5月22日14:01:39
+ * 2021-5-22 14:53:53
+ * <p>
  * 测试nextLine
  */
-public class ReadEnter {
+public class ReadEnter_Test版 {
     /**
      * 注意scanner必须使用主函数，@Test没有办法使用
+     * <p>
+     * 查阅得，这是IDEA的锅，
+     * <p>
+     * 在Help里面自定义vm选项中加入下面的即可
+     * <p>
+     * -Deditable.java.test.console=true
      */
-    public static void demo() {
+    public void demo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入：");
         String s = scanner.nextLine();
-        if (!s.equals(null)) {
-            //且不为回车
+        pd(s);
+    }
+
+    /**
+     * 限制输入的字符规则
+     *
+     * @param s
+     */
+    private static void pd(String s) {
+        if (s.length() != 0) {
             System.out.println("success");
+        } else if (s.length() == 0) {
+            System.err.println("输入内容不能为空");
         }
     }
 
-
     /**
-     * main
-     *
-     * @param args
+     * main1
      */
-    public static void main(String[] args) {
+    @Test
+    public void main1() {
         int a = 1;
         do {
             demo();
@@ -43,7 +59,7 @@ public class ReadEnter {
      *
      * @return
      */
-    private static int scanner_parameter() {
+    private int scanner_parameter() {
         Scanner scanner = new Scanner(System.in);
         Object s = scanner.nextLine();
         if (s.equals("1")) {

@@ -1,30 +1,22 @@
-package com.T_Lyon;
+package com.T_Lyon.next;
 
-import org.junit.Test;
 
 import java.util.Scanner;
 
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 14:53:53
- * <p>
+ * 2021年5月22日14:01:39
  * 测试nextLine
  */
-public class ReadEnter_Test版 {
+public class ReadEnter {
     /**
      * 注意scanner必须使用主函数，@Test没有办法使用
-     * <p>
-     * 查阅得，这是IDEA的锅，
-     * <p>
-     * 在Help里面自定义vm选项中加入下面的即可
-     * <p>
-     * -Deditable.java.test.console=true
      */
-    public void demo() {
+    public static void demo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入：");
-        String s = scanner.nextLine();
+        String s = scanner.next();
         if (!s.equals(null)) {
             //且不为回车
             System.out.println("success");
@@ -33,10 +25,11 @@ public class ReadEnter_Test版 {
 
 
     /**
-     * main1
+     * main
+     *
+     * @param args
      */
-    @Test
-    public void main1() {
+    public static void main(String[] args) {
         int a = 1;
         do {
             demo();
@@ -50,7 +43,7 @@ public class ReadEnter_Test版 {
      *
      * @return
      */
-    private int scanner_parameter() {
+    private static int scanner_parameter() {
         Scanner scanner = new Scanner(System.in);
         Object s = scanner.nextLine();
         if (s.equals("1")) {
