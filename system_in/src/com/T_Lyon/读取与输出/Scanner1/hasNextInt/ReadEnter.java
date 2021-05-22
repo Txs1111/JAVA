@@ -1,4 +1,4 @@
-package com.T_Lyon.Scanner1.hasNextInt;
+package com.T_Lyon.读取与输出.Scanner1.hasNextInt;
 
 
 import java.util.Scanner;

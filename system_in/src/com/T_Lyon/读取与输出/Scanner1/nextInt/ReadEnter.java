@@ -1,31 +1,24 @@
-package com.T_Lyon.Scanner1.nextLine;
-
-import org.junit.Test;
+package com.T_Lyon.读取与输出.Scanner1.nextInt;
 
 import java.util.Scanner;
+
 
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 14:53:53
- * <p>
- * 测试nextLine
+ * 2021-5-22 15:11:53
+ * 测试next
  */
-public class ReadEnter_Test版 {
+public class ReadEnter {
     /**
-     * 注意scanner必须使用主函数，@Test没有办法使用
-     * <p>
-     * 查阅得，这是IDEA的锅，
-     * <p>
-     * 在Help里面自定义vm选项中加入下面的即可
-     * <p>
-     * -Deditable.java.test.console=true
+     * 只能读取一个整数，其他的就会报错
      */
-    public void demo() {
+    public static void demo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入：");
-        String s = scanner.nextLine();
-        pd(s);
+        int i = scanner.nextInt();
+        System.out.println("result：" + i);
+//        pd(s);
     }
 
     /**
@@ -41,11 +34,13 @@ public class ReadEnter_Test版 {
         }
     }
 
+
     /**
-     * main1
+     * main
+     *
+     * @param args
      */
-    @Test
-    public void main1() {
+    public static void main(String[] args) {
         int a = 1;
         do {
             demo();
@@ -59,7 +54,7 @@ public class ReadEnter_Test版 {
      *
      * @return
      */
-    private int scanner_parameter() {
+    private static int scanner_parameter() {
         Scanner scanner = new Scanner(System.in);
         Object s = scanner.nextLine();
         if (s.equals("1")) {
@@ -70,4 +65,5 @@ public class ReadEnter_Test版 {
             return 0;
         }
     }
+
 }

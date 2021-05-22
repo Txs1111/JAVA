@@ -1,8 +1,6 @@
-package com.T_Lyon.System1.console;
+package com.T_Lyon.读取与输出.console;
 
-import java.io.BufferedReader;
 import java.io.Console;
-import java.io.InputStreamReader;
 
 /**
  * @author Lyon

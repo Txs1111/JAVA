@@ -1,22 +1,25 @@
-package com.T_Lyon.Scanner1.nextDouble;
+package com.T_Lyon.读取与输出.Scanner1.hasNextDouble;
+
 
 import java.util.Scanner;
+
 
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 15:40:19
- * 测试nextDouble
+ * 2021-5-22 15:54:50
+ * 测试hasNextDouble
  */
 public class ReadEnter {
     /**
-     * 只能读取一个浮点型，其他的就会报错
+     * 读取输入的单词，判断是否有Double型数（读取Double，Int等整形类型的数中间有其他类型的数就会结束读取），以空格为界限，常搭配next使用
      */
     public static void demo() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入：");
-        double v = scanner.nextDouble();
-        System.out.println("result:" + v);
+        System.out.println("请输入若干单词，以空格作为分隔");
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNextDouble()) {
+            System.out.println("键盘输入的内容是：" + sc.next());
+        }
 //        pd(s);
     }
 

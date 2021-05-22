@@ -1,4 +1,4 @@
-package com.T_Lyon.Scanner1.hasNext;
+package com.T_Lyon.读取与输出.Scanner1.next;
 
 
 import java.util.Scanner;
@@ -7,20 +7,18 @@ import java.util.Scanner;
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 15:39:55
- * 测试hasNext
+ * 2021-5-22 15:25:27
+ * 测试next
  */
 public class ReadEnter {
     /**
-     * 读取输入的单词，判断是否还有下一个单词，以空格为界限，常搭配next使用
+     * 以空格为界限，只读取第一个空格前的字符，后面的字符一律不读取
      */
     public static void demo() {
-        System.out.println("请输入若干单词，以空格作为分隔");
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            System.out.println("键盘输入的内容是：" + sc.next());
-        }
-//        pd(s);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入：");
+        String s = scanner.next();
+        pd(s);
     }
 
     /**
