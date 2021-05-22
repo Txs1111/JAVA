@@ -2,21 +2,23 @@ package com.T_Lyon.nextInt;
 
 import java.util.Scanner;
 
+
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 15:25:27
- * 测试nextInt
+ * 2021-5-22 15:11:53
+ * 测试next
  */
 public class ReadEnter {
     /**
-     * 注意scanner必须使用主函数，@Test没有办法使用
+     * 只能读取一个整数，其他的就会报错
      */
     public static void demo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入：");
-        String s = scanner.nextLine();
-        pd(s);
+        int i = scanner.nextInt();
+        System.out.println("result：" + i);
+//        pd(s);
     }
 
     /**

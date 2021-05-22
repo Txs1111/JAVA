@@ -1,25 +1,23 @@
-package com.T_Lyon.nextLine;
-
+package com.T_Lyon.nextDouble;
 
 import java.util.Scanner;
 
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 15:12:00
- * 测试nextLine
+ * 2021-5-22 15:25:27
+ * 测试nextInt
  */
 public class ReadEnter {
     /**
-     * 以行为界限，读取回车前输入的所有字符
-     * <p>
-     * 注意scanner必须使用主函数，@Test没有办法使用
+     *
      */
     public static void demo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入：");
-        String s = scanner.nextLine();
-        pd(s);
+        double v = scanner.nextDouble();
+        System.out.println("result:" + v);
+//        pd(s);
     }
 
     /**
@@ -29,7 +27,6 @@ public class ReadEnter {
      */
     private static void pd(String s) {
         if (s.length() != 0) {
-            System.out.println("你输入的是：" + s);
             System.out.println("success");
         } else if (s.length() == 0) {
             System.err.println("输入内容不能为空");
