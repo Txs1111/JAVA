@@ -1,23 +1,22 @@
-package com.T_Lyon.next;
-
+package com.T_Lyon.nextInt;
 
 import java.util.Scanner;
 
 /**
  * @author Lyon
  * <p>
- * 2021-5-22 15:11:53
- * 测试next
+ * 2021-5-22 15:25:27
+ * 测试nextInt
  */
 public class ReadEnter {
     /**
-     * next以空格为界限，很多字符的时候，一旦有空格分隔，就只会读取第一个空格前的字符
+     * 注意scanner必须使用主函数，@Test没有办法使用
      */
     public static void demo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入：");
-        String s = scanner.next();
-//        pd(s);
+        String s = scanner.nextLine();
+        pd(s);
     }
 
     /**

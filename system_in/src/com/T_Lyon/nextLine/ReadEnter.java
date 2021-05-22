@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author Lyon
  * <p>
- * 2021年5月22日14:01:39
+ * 2021-5-22 15:12:00
  * 测试nextLine
  */
 public class ReadEnter {
