@@ -11,5 +11,6 @@ public class demo {
         //获取虚拟机启动目录的位置，重点System.getProperty()
         String property = System.getProperty("user.dir");
         System.out.println(property);
+        Enum a =
     }
 }
