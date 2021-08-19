@@ -18,16 +18,14 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
 <div align="center">
-    <table width="506" height="170" border="0" cellpadding="0"
-           cellspacing="0" background="image/background1.jpg">
+    <table width="506" height="170" border="0" cellpadding="0" cellspacing="0" background="image/background1.jpg">
         <tr>
             <td align="center">
-                <form name="form" method="post"
-                      action="showUser.jsp"
-                      onSubmit="return checkEmpty(form)">
-                    <input type="text" name="user"><br>
-                    <br> <input type="submit" name="Submit"
-                                value="登录">
+                <form name="form" method="post" action="showUser.jsp" onSubmit="return checkEmpty(form)">
+                    <input type="text" name="user">
+                    <br>
+                    <br>
+                    <input type="submit" name="Submit" value="登录">
                 </form>
             </td>
         </tr>

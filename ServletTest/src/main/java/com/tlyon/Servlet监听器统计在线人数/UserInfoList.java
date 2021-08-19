@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * @author Lyon
  */
 public class UserInfoList {
-    private static UserInfoList user = new UserInfoList();
-    private ArrayList<String> ArrayList = null;
+    private static UserInfoList userInfoList = new UserInfoList();
+    private ArrayList<String> ArrayList;
 
     public UserInfoList() {
         this.ArrayList = new ArrayList<String>();
@@ -17,13 +17,19 @@ public class UserInfoList {
 
     //外界使用的instance对象
     public static UserInfoList getInstance() {
-        return user;
+        java.util.ArrayList<String> strings = new ArrayList<String>();
+        strings.add("测试1");
+        userInfoList.ArrayList=strings;
+        return userInfoList;
     }
 
     //增加用户
     public boolean addUserInfo(String user) {
         if (user != null) {
-            this.ArrayList.add(user);
+            java.util.ArrayList<String> strings = new ArrayList<String>();
+            strings.add("测试2");
+            userInfoList.ArrayList=strings;
+            ArrayList.add(user);
             return true;
         } else {
             return false;

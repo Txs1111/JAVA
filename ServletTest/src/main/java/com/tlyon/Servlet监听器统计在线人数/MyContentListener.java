@@ -8,28 +8,26 @@ import javax.servlet.http.HttpSessionBindingEvent;
 
 /**
  * Application Lifecycle Listener implementation class MyContentListener
- *
  */
-@WebListener("This is only a demo listener") 
+@WebListener("This is only a demo listener")
 public class MyContentListener implements ServletContextListener {
 
     /**
-     * Default constructor. 
+     * Default constructor.
      */
     public MyContentListener() {
         // TODO Auto-generated constructor stub
     }
 
-	public void contextDestroyed(ServletContextEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+    public void contextDestroyed(ServletContextEvent arg0) {
+        // TODO Auto-generated method stub
 
-	public void contextInitialized(ServletContextEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+    }
 
-	
-	
+    public void contextInitialized(ServletContextEvent arg0) {
+        // TODO Auto-generated method stub
+
+    }
+
+
 }
