@@ -13,5 +13,6 @@
 <body>
 欢迎光临，第
 <%=application.getAttribute("count")%>位用户
+<a href="encoding.html">过滤器页面</a>
 </body>
 </html>
