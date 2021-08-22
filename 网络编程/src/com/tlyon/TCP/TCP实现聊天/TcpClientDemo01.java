@@ -1,10 +1,9 @@
-package com.tlyon.TCP实现聊天;
+package com.tlyon.TCP.TCP实现聊天;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class TcpClientDemo01 {
     @SuppressWarnings("all")

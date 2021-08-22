@@ -1,10 +1,10 @@
-package com.tlyon.TCP发送消息并上传文件;
+package com.tlyon.TCP.TCP文件上传实现;
 
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
-public class TcpClientDemo03 {
+public class TcpClientDemo02 {
     @SuppressWarnings("all")
     public static void main(String[] args) throws Exception {
         Socket socket = null;
@@ -12,6 +12,7 @@ public class TcpClientDemo03 {
         FileInputStream fileInputStream = null;
         InputStream inputStream = null;
         ByteArrayOutputStream byteArrayOutputStream = null;
+
 
         //1. 创建一个socket连接
         socket = new Socket(InetAddress.getByName("192.168.0.103"), 9000);
@@ -22,11 +23,7 @@ public class TcpClientDemo03 {
 
 
         //3.读取文件
-        String name = "qingjiang.jpg";
-        fileInputStream = new FileInputStream(new File((name)));
-        //将文件名传递过去
-        outputStream = socket.getOutputStream();
-        outputStream.write(name.getBytes());
+        fileInputStream = new FileInputStream(new File(("qingjiang.jpg")));
 
 
         //4.写出文件
@@ -36,14 +33,14 @@ public class TcpClientDemo03 {
             outputStream.write(buffer, 0, len);
         }
 
-
         //通知服务器我已经传输完了
         socket.shutdownOutput();
 
-
-        //创建输入流
+//        获取服务器返回的消息
+//        创建一个输入流
         inputStream = socket.getInputStream();
-        //创建输出流
+        //String byte[]
+//        创建一个输出流
         byteArrayOutputStream = new ByteArrayOutputStream();
         byte[] buffer2 = new byte[1024];
         int len2;
@@ -52,8 +49,8 @@ public class TcpClientDemo03 {
         }
         System.out.println(byteArrayOutputStream.toString());
 
-        inputStream.close();
         byteArrayOutputStream.close();
+        inputStream.close();
         fileInputStream.close();
         outputStream.close();
         socket.close();
