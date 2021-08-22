@@ -10,7 +10,8 @@ public class TcpClientDemo03 {
         Socket socket = null;
         OutputStream outputStream = null;
         FileInputStream fileInputStream = null;
-
+        InputStream inputStream = null;
+        ByteArrayOutputStream byteArrayOutputStream = null;
 
         //1. 创建一个socket连接
         socket = new Socket(InetAddress.getByName("192.168.0.103"), 9000);
@@ -35,17 +36,24 @@ public class TcpClientDemo03 {
             outputStream.write(buffer, 0, len);
         }
 
+
+        //通知服务器我已经传输完了
+        socket.shutdownOutput();
+
+
         //创建输入流
-        InputStream inputStream = socket.getInputStream();
+        inputStream = socket.getInputStream();
         //创建输出流
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        byteArrayOutputStream = new ByteArrayOutputStream();
         byte[] buffer2 = new byte[1024];
         int len2;
-        while ((len2 = inputStream.read(buffer)) != -1) {
-            byteArrayOutputStream.write(buffer, 0, len);
+        while ((len2 = inputStream.read(buffer2)) != -1) {
+            byteArrayOutputStream.write(buffer2, 0, len2);
         }
+        System.out.println(byteArrayOutputStream.toString());
 
-
+        inputStream.close();
+        byteArrayOutputStream.close();
         fileInputStream.close();
         outputStream.close();
         socket.close();

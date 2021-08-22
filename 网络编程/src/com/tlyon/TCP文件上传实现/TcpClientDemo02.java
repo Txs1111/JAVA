@@ -33,6 +33,9 @@ public class TcpClientDemo02 {
             outputStream.write(buffer, 0, len);
         }
 
+        //通知服务器我已经传输完了
+        socket.shutdownOutput();
+
 //        获取服务器返回的消息
 //        创建一个输入流
         inputStream = socket.getInputStream();
@@ -41,9 +44,10 @@ public class TcpClientDemo02 {
         byteArrayOutputStream = new ByteArrayOutputStream();
         byte[] buffer2 = new byte[1024];
         int len2;
-        while ((len2 = inputStream.read(buffer)) != -1) {
-            byteArrayOutputStream.write(buffer, 0, len);
+        while ((len2 = inputStream.read(buffer2)) != -1) {
+            byteArrayOutputStream.write(buffer2, 0, len2);
         }
+        System.out.println(byteArrayOutputStream.toString());
 
         byteArrayOutputStream.close();
         inputStream.close();

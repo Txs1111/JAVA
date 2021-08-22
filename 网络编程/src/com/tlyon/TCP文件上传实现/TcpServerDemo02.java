@@ -16,11 +16,10 @@ public class TcpServerDemo02 {
         OutputStream outputStream = null;
 
 
-//            1.创建服务
-        serverSocket = new ServerSocket(9000);
-
-
         while (true) {
+
+//            1.创建服务
+            serverSocket = new ServerSocket(9000);
 
 //            2.等待客户端连接过来
             socket = serverSocket.accept();//阻塞式监听，会一直等待客户端连接
@@ -37,7 +36,9 @@ public class TcpServerDemo02 {
 
 
             outputStream = socket.getOutputStream();
-            outputStream.write("收到qingjiang.jpg".getBytes());
+            outputStream.write(("服务器"+"收到qingjiang.jpg").getBytes());
+
+            outputStream.close();
             fileOutputStream.close();
             inputStream.close();
             socket.close();

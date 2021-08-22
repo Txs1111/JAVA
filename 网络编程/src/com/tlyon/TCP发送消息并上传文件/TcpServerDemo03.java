@@ -16,12 +16,15 @@ public class TcpServerDemo03 {
         ServerSocket serverSocket = null;
         String cilentFileName = null;
         String ServerFilename = null;
-
-//            1.创建服务
-        serverSocket = new ServerSocket(9000);
+        OutputStream outputStream = null;
 
 
         while (true) {
+
+//            1.创建服务
+            serverSocket = new ServerSocket(9000);
+
+
 //            2.等待客户端连接过来
             socket = serverSocket.accept();//阻塞式监听，会一直等待客户端连接
 
@@ -34,20 +37,22 @@ public class TcpServerDemo03 {
             while ((len = inputStream.read(buffer)) != -1) {
                 byteArrayOutputStream.write(buffer, 0, len);
             }
+
 //            将传递过来的文件名赋值到name里
             cilentFileName = byteArrayOutputStream.toString();
             ServerFilename = "收到" + cilentFileName;
 
-//            文件接受
+
+//            文件接收
             fileOutputStream = new FileOutputStream(new File(ServerFilename));
             byte[] buffer2 = new byte[1024];
             int len2;
             while ((len2 = inputStream.read(buffer)) != -1) {
                 fileOutputStream.write(buffer, 0, len);
             }
-
+            System.out.println("接受到文件并转为——" + ServerFilename);
 //            返回消息给客户端
-            OutputStream outputStream = socket.getOutputStream();
+            outputStream = socket.getOutputStream();
             outputStream.write(("服务器接受到文件并转为——" + ServerFilename).getBytes());
 
             outputStream.close();
