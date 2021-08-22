@@ -17,7 +17,10 @@ public class TcpServerDemo03 {
         String cilentFileName = null;
         String ServerFilename = null;
         OutputStream outputStream = null;
-
+        byte[] buffer = new byte[1024];
+        int len;
+        byte[] buffer2 = new byte[1024];
+        int len2;
 
         while (true) {
 
@@ -32,8 +35,7 @@ public class TcpServerDemo03 {
 //            3.读取客户端的消息
             inputStream = socket.getInputStream();
             byteArrayOutputStream = new ByteArrayOutputStream();
-            byte[] buffer = new byte[1024];
-            int len;
+
             while ((len = inputStream.read(buffer)) != -1) {
                 byteArrayOutputStream.write(buffer, 0, len);
             }
@@ -45,12 +47,13 @@ public class TcpServerDemo03 {
 
 //            文件接收
             fileOutputStream = new FileOutputStream(new File(ServerFilename));
-            byte[] buffer2 = new byte[1024];
-            int len2;
+
             while ((len2 = inputStream.read(buffer)) != -1) {
                 fileOutputStream.write(buffer, 0, len);
             }
             System.out.println("接受到文件并转为——" + ServerFilename);
+
+
 //            返回消息给客户端
             outputStream = socket.getOutputStream();
             outputStream.write(("服务器接受到文件并转为——" + ServerFilename).getBytes());

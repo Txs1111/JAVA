@@ -48,6 +48,7 @@ public class TcpClientDemo03 {
         byte[] buffer2 = new byte[1024];
         int len2;
         while ((len2 = inputStream.read(buffer2)) != -1) {
+//      while ((inputStream.read(buffer2,0,len2= buffer.length)) != -1) {
             byteArrayOutputStream.write(buffer2, 0, len2);
         }
         System.out.println(byteArrayOutputStream.toString());
