@@ -1,5 +1,7 @@
-package com.tlyon.容器.手写容器.LinkedList;
+package com.tlyon.容器.手写容器.LinkedList.增加泛型;
 
+
+import com.tlyon.容器.手写容器.LinkedList.Node;
 
 /**
  * 自定义一个链表
@@ -9,76 +11,52 @@ package com.tlyon.容器.手写容器.LinkedList;
  */
 
 public class SxtLinkedList05<E> {
-
     private Node first;
     private Node last;
-
     private int size;
 
-
     public void add(int index, E element) {   //alt+shift+R
-
         checkRange(index);
-
         Node newNode = new Node(element);
         Node temp = getNode(index);
-
         if (temp != null) {
             Node up = temp.previous;
-
             up.next = newNode;
             newNode.previous = up;
-
             newNode.next = temp;
             temp.previous = newNode;
-
         }
-
-
     }
 
-
     public void remove(int index) {
-
         checkRange(index);
-
         Node temp = getNode(index);
-
         if (temp != null) {
             Node up = temp.previous;
             Node down = temp.next;
-
             if (up != null) {
                 up.next = down;
             }
-
             if (down != null) {
                 down.previous = up;
             }
-
             //被删除的元素是第一个元素时
             if (index == 0) {
                 first = down;
             }
-
             //被删除的元素是最后一个元素时
             if (index == size - 1) {
                 last = up;
             }
-
             size--;
         }
-
     }
 
     //[]
     //["a","b","c","d","e","f"]           2
     public E get(int index) {
-
         checkRange(index);
-
         Node temp = getNode(index);
-
         return temp != null ? (E) temp.element : null;
     }
 
@@ -88,13 +66,9 @@ public class SxtLinkedList05<E> {
         }
     }
 
-
     private Node getNode(int index) {
-
         checkRange(index);
-
         Node temp = null;
-
         if (index <= (size >> 1)) {   //size>>1相当于除以2
             temp = first;
             for (int i = 0; i < index; i++) {
@@ -106,14 +80,11 @@ public class SxtLinkedList05<E> {
                 temp = temp.previous;
             }
         }
-
         return temp;
     }
 
-
     public void add(E element) {
         Node node = new Node(element);
-
         if (first == null) {
 //			node.previous = null;
 //			node.next = null;
@@ -126,12 +97,8 @@ public class SxtLinkedList05<E> {
 
             last.next = node;
             last = node;
-
         }
-
         size++;
-
-
     }
 
     @Override
@@ -145,7 +112,6 @@ public class SxtLinkedList05<E> {
             temp = temp.next;
         }
         sb.setCharAt(sb.length() - 1, ']');
-
         return sb.toString();
     }
 
@@ -159,8 +125,5 @@ public class SxtLinkedList05<E> {
 
         System.out.println(list.get(1));
 
-
     }
-
-
 }
