@@ -1,4 +1,4 @@
-package com.tlyon.String源码.测试StringBuilder和StringBuffer可变字符序列;
+package com.tlyon.常用类.String源码.测试StringBuilder和StringBuffer可变字符序列;
 
 /**
  * 测试StringBuilder、StringBuffer可变字符序列

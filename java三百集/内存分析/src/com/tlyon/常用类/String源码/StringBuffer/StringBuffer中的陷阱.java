@@ -1,4 +1,4 @@
-package com.tlyon.String源码.StringBuffer;
+package com.tlyon.常用类.String源码.StringBuffer;
 
 public class StringBuffer中的陷阱 {
     /**
