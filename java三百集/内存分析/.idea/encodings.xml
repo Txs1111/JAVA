@@ -3,11 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/LinkedList_get元素/SxtLinkedList02.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/LinkedList增加元素/SxtLinkedList01.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/LinkedList插入节点/SxtLinkedList04.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/LinkedList移除元素/SxtLinkedList03.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/Node.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/Node2.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/Node3.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/SxtLinkedList03.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/SxtLinkedList04.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/tlyon/容器/手写容器/LinkedList/SxtLinkedList05.java" charset="UTF-8" />
   </component>
 </project>
