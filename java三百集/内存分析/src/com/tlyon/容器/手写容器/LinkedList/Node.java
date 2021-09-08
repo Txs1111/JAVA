@@ -3,9 +3,9 @@ package com.tlyon.容器.手写容器.LinkedList;
 public class Node {
 
 
-    Node previous;        //上一个节点
-    Node next;                //下一个节点
-    Object element;        //元素数据
+    public Node previous;        //上一个节点
+    public Node next;                //下一个节点
+    public Object element;        //元素数据
 
 
     public Node(Node previous, Node next, Object element) {
