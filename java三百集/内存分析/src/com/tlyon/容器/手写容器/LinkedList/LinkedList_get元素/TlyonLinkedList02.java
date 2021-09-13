@@ -9,7 +9,7 @@ import com.tlyon.容器.手写容器.LinkedList.Node;
  *
  * @author Administrator
  */
-public class SxtLinkedList02 {
+public class TlyonLinkedList02 {
     private Node first;
     private Node last;
     private int size;
@@ -67,7 +67,7 @@ public class SxtLinkedList02 {
     }
 
     public static void main(String[] args) {
-        SxtLinkedList02 list = new SxtLinkedList02();
+        TlyonLinkedList02 list = new TlyonLinkedList02();
 
         list.add("a");
         list.add("b");

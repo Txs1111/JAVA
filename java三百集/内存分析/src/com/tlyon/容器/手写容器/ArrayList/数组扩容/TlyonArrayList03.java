@@ -8,15 +8,15 @@ import java.util.ArrayList;
  *
  * @author 高淇
  */
-public class SxtArrayList03<E> {
+public class TlyonArrayList03<E> {
     private Object[] elementData;
     private int size;
     private static final int DEFALT_CAPACITY = 10;
 
-    public SxtArrayList03() {
+    public TlyonArrayList03() {
         elementData = new Object[DEFALT_CAPACITY];
     }
-    public SxtArrayList03(int capacity) {
+    public TlyonArrayList03(int capacity) {
         elementData = new Object[capacity];
         ArrayList l;
     }
@@ -46,7 +46,7 @@ public class SxtArrayList03<E> {
     }
 
     public static void main(String[] args) {
-        SxtArrayList03 s1 = new SxtArrayList03();
+        TlyonArrayList03 s1 = new TlyonArrayList03();
         for (int i = 0; i < 400; i++) {
             s1.add("gao" + i);
         }

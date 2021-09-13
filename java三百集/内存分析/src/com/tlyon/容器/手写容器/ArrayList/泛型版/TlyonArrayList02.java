@@ -7,7 +7,7 @@ package com.tlyon.容器.手写容器.ArrayList.泛型版;
  * @author 高淇
  *
  */
-public class SxtArrayList02<E> {
+public class TlyonArrayList02<E> {
 
     private Object[]  elementData;
     private int  size;
@@ -15,11 +15,11 @@ public class SxtArrayList02<E> {
     private static final int DEFALT_CAPACITY = 10 ;
 
 
-    public SxtArrayList02(){
+    public TlyonArrayList02(){
         elementData = new Object[DEFALT_CAPACITY];
     }
 
-    public SxtArrayList02(int  capacity) {
+    public TlyonArrayList02(int  capacity) {
         elementData  = new Object[capacity];
     }
 
@@ -44,7 +44,7 @@ public class SxtArrayList02<E> {
 
 
     public static void main(String[] args) {
-        SxtArrayList02  s1 = new SxtArrayList02(20);
+        TlyonArrayList02 s1 = new TlyonArrayList02(20);
         s1.add("aa");
         s1.add("bb");
 

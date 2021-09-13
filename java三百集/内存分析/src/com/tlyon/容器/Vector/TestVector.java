@@ -9,6 +9,8 @@ import java.util.Vector;
  * 需要线程安全时用vector
  * vector一般在使用线程同步的时候使用
  *
+ * 一般是将list替换为vector
+ *
  * @author Administrator
  */
 public class TestVector {

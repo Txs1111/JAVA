@@ -1,20 +1,20 @@
-package com.tlyon.容器.手写容器.ArrayList.数组越界;
-
+package com.tlyon.容器.手写容器.ArrayList.数组元素删除;
 
 /**
- * 增加set和get方法
- * 增加：数组边界的检查
+ * 增加remove
  *
  * @author 高淇
  */
-public class SxtArrayList04<E> {
+public class TlyonArrayList05<E> {
     private Object[] elementData;
     private int size;
     private static final int DEFALT_CAPACITY = 10;
-    public SxtArrayList04() {
+
+    public TlyonArrayList05() {
         elementData = new Object[DEFALT_CAPACITY];
     }
-    public SxtArrayList04(int capacity) {
+
+    public TlyonArrayList05(int capacity) {
         if (capacity < 0) {
             throw new RuntimeException("容器的容量不能为负数");
         } else if (capacity == 0) {
@@ -22,6 +22,14 @@ public class SxtArrayList04<E> {
         } else {
             elementData = new Object[capacity];
         }
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0 ? true : false;
     }
 
     public void add(E element) {
@@ -53,6 +61,26 @@ public class SxtArrayList04<E> {
         }
     }
 
+    public void remove(E element) {
+        //element，将它和所有元素挨个比较，获得第一个比较为true的，返回。
+        for (int i = 0; i < size; i++) {
+            if (element.equals(get(i))) {   //容器中所有的比较操作，都是用的equals而不是==
+                //将该元素从此处移除
+                remove(i);
+            }
+        }
+    }
+
+    public void remove(int index) {
+        //a,b,c,d,e,f,g,h
+        //a,b,c,e,f,g,h,h
+        int numMoved = elementData.length - index - 1;
+        if (numMoved > 0) {
+            System.arraycopy(elementData, index + 1, elementData, index, numMoved);
+        }
+        elementData[--size] = null;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -66,13 +94,20 @@ public class SxtArrayList04<E> {
     }
 
     public static void main(String[] args) {
-        SxtArrayList04 s1 = new SxtArrayList04();
+        TlyonArrayList05 s1 = new TlyonArrayList05();
+
         for (int i = 0; i < 40; i++) {
             s1.add("gao" + i);
         }
         s1.set("dddd", 10);
         System.out.println(s1);
         System.out.println(s1.get(39));
-
+        s1.remove(3);
+        s1.remove("gao11");
+        System.out.println(s1);
+        System.out.println(s1.size);
+        System.out.println(s1.isEmpty());
     }
+
+
 }
