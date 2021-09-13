@@ -1,7 +1,7 @@
 package com.tlyon.常用类.内存分析;
 
 
-public class SxtStu {
+public class TlyonStu {
 
     //属性fields
     int  id;
@@ -20,14 +20,14 @@ public class SxtStu {
     }
 
     //构造方法。用于创建这个类的对象。无参的构造方法可以由系统自动创建。
-    SxtStu(){
+    TlyonStu(){
         System.out.println("调用了无参的构造方法！");
     }
 
     //程序执行的入口，必须要有
-    //javac  Sxtstu.java   ,   java Sxtstu
+    //javac  Tlyonstu.java   ,   java Tlyonstu
     public static void main(String[] args) {
-        SxtStu  stu = new SxtStu();   //创建一个对象
+        TlyonStu  stu = new TlyonStu();   //创建一个对象
         stu.id=1001;
         stu.sname= "高淇";
         stu.age = 18;

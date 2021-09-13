@@ -1,4 +1,4 @@
-package com.tlyon.容器.手写容器.LinkedList;
+package com.tlyon.容器.手写容器.HashMap;
 
 //用于SxtHashMap中
 public class Node3<K, V> {
