@@ -1,4 +1,4 @@
-package com.tlyon.容器.手写容器.HashMap.HashMap_put存储键值对;
+package com.tlyon.容器.手写容器.HashMap.HashMap_put存储键值对_HashMap解决键重复问题;
 
 
 import com.tlyon.容器.手写容器.HashMap.Node2;

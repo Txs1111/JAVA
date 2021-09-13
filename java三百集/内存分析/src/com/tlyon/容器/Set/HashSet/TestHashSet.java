@@ -1,4 +1,4 @@
-package com.tlyon.容器;
+package com.tlyon.容器.Set.HashSet;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -27,7 +27,6 @@ public class TestHashSet {
 		set2.addAll(set1);
 		System.out.println(set2);
 		
-		
-		
+
 	}
 }

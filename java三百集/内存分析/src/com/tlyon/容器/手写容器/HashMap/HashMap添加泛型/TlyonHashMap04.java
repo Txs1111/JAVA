@@ -1,4 +1,6 @@
-package com.tlyon.容器.手写容器.HashMap;
+package com.tlyon.容器.手写容器.HashMap.HashMap添加泛型;
+
+import com.tlyon.容器.手写容器.HashMap.Node3;
 
 /**
  * 自定义一个HashMap
@@ -6,28 +8,28 @@ package com.tlyon.容器.手写容器.HashMap;
  * @author 高淇
  *
  */
-public class SxtHashMap03 {
+public class TlyonHashMap04<K,V> {
 	
-	Node2[]  table;    //位桶数组。bucket  array
+	Node3[]  table;    //位桶数组。bucket  array
 	int size;				//存放的键值对的个数
 	
-	public SxtHashMap03() {
-		table = new Node2[16];    //长度一般定义成2的整数幂
+	public TlyonHashMap04() {
+		table = new Node3[16];    //长度一般定义成2的整数幂
 	}
 	
 	
-	public  Object  get(Object  key){
+	public  V  get(K  key){
 		
 		int  hash = myHash(key.hashCode(), table.length);
-		Object value = null; 
+		V value = null; 
 		
 		if(table[hash]!=null){
-			Node2  temp = table[hash];
+			Node3  temp = table[hash];
 			
 			while(temp!=null){
 				
 				if(temp.key.equals(key)){   //如果相等，则说明找到了键值对，返回相应的value
-					value = temp.value;
+					value = (V)temp.value;
 					break;
 				}else{
 					temp = temp.next;
@@ -40,20 +42,20 @@ public class SxtHashMap03 {
 	}
 	
 	
-	public  void   put(Object key,  Object   value){
+	public  void   put(K key,  V   value){
 		
 		//如果要完善，还需要考虑数组扩容的问题！！！
 		
 		//定义了新的节点对象
-		Node2    newNode = new Node2();
+		Node3    newNode = new Node3();
 		newNode.hash = myHash(key.hashCode(),table.length);
 		newNode.key =  key;
 		newNode.value = value;
 		newNode.next = null;
 		
-		Node2 temp = table[newNode.hash];
+		Node3 temp = table[newNode.hash];
 		
-		Node2  iterLast = null;  //正在遍历的最后一个元素
+		Node3  iterLast = null;  //正在遍历的最后一个元素
 		boolean  keyRepeat = false;  
 		if(temp==null){
 			//此处数组元素为空，则直接将新节点放进去
@@ -97,7 +99,7 @@ public class SxtHashMap03 {
 		
 		//遍历bucket数组
 		for(int i=0;i<table.length;i++){
-			Node2  temp = table[i]; 
+			Node3  temp = table[i]; 
 			
 			//遍历链表
 			while(temp!=null){
@@ -112,22 +114,9 @@ public class SxtHashMap03 {
 	
 	
 	public static void main(String[] args) {
-		SxtHashMap03  m = new SxtHashMap03();
+		TlyonHashMap04<Integer,String>  m = new TlyonHashMap04<>();
 		m.put(10, "aa");
 		m.put(20, "bb");
-		m.put(30, "cc");
-		m.put(20, "ssss");
-		
-		m.put(53, "gg");
-		m.put(69, "hh");
-		m.put(85, "kk");
-		
-		
-		System.out.println(m);
-
-//		for(int i=10;i<100;i++){
-//			System.out.println(i+"---"+myHash(i,16));   //53, 69,85
-//		}
 		
 		System.out.println(m.get(85));  
 		
