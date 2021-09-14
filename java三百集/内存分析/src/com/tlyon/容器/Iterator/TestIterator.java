@@ -1,4 +1,4 @@
-package com.tlyon.容器;
+package com.tlyon.容器.Iterator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ public class TestIterator {
 //		testIteratorList();
 //		testIteratorSet();
 //		testIteratorMap();
-		
+
 		testRemove();
 	}
 	
@@ -34,7 +34,7 @@ public class TestIterator {
 			String  temp = iter.next();
 			System.out.println(temp);
 		}
-		
+
 	}
 	
 	public static void testIteratorSet(){
